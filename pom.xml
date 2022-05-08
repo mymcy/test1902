@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.bjpwoernode</groupId>
+  <artifactId>mybatis_02</artifactId>
+  <version>1.0</version>
+
+
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!--    添加mybatis的依赖-->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.5.6</version>
+    </dependency>
+
+
+    <!--    添加mysql依赖-->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.21</version>
+    </dependency>
+  </dependencies>
+
+  <!--添加资源文件的指定-->
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>  <!--指定这个路径下的资源文件编译后都会到target里面-->
+        <includes>
+          <include>**/*.xml</include><!--追加这个路径下的xml文件和properties文件都会拷贝到target里面-->
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>s rc/main/resources</directory> <!--指定这个路径下的资源文件编译后都会到target里面-->
+        <includes>
+          <include>**/*.xml</include><!--追加这个路径下的xml文件和properties文件都会拷贝到target里面-->
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+    </resources>
+
+
+  </build>
+
+
+</project>
