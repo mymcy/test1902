@@ -21,6 +21,7 @@ public class test {
         SqlSession session=ssf.openSession();
         SqlSession session1=ssf.openSession();
         usermapper umapp = session.getMapper(usermapper.class);//获取代理对象
+        usermapper umapp2 = session1.getMapper(usermapper.class);//获取代理对象
         usermapper umapp1 = session1.getMapper(usermapper.class);//获取代理对象
         //session.selectList("");//这样是没有用到代理的,是直接取xml文件中找到sql语句的
 //        List<user> list= umapp.getAll();//这边就是在调用接口中的方法,mybatis框架底层已经将功能代理出来了
